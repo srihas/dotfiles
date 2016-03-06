@@ -1,3 +1,4 @@
+atom
 alfred
 appcleaner
 boot2docker
@@ -29,6 +30,7 @@ qlmarkdown
 qlprettypatch
 qlstephen
 quicklook-json
+rbenv
 rbtools
 selfcontrol
 sequel-pro

@@ -25,3 +25,6 @@ fi
 # if [ -d "${HOME}/info" ]; then
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
+
+# Init rbenv
+eval "$(rbenv init -)"
