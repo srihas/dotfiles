@@ -1,0 +1,9 @@
+[submodule "danro"]
+	path = danro
+	url = https://github.com/srihas/danro-dotfiles.git
+[submodule "mathais"]
+	path = mathais
+	url = https://github.com/srihas/mathias-dotfiles.git
+[submodule "rozuur"]
+	path = rozuur
+	url = https://github.com/srihas/rozuur-dotfiles.git
