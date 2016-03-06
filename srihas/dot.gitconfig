@@ -20,6 +20,7 @@ cia = commit --amend
 cian = commit --amend --no-edit
 rb = rebase
 b = branch
+url = config --get remote.origin.url
 ps = push
 pso = "!git push -u origin $(git branch-name)"
 l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all -20
