@@ -12,7 +12,7 @@ for option in autocd globstar; do
 done
 
 # All the settings reside inside ~/config/ folder, so source all those files.
-for file in ${HOME}/dotfiles/srihas/dotfiles/config/*
+for file in ${HOME}/dotfiles/srihas/config/*
 do
     source $file
 done

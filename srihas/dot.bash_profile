@@ -6,8 +6,8 @@ if [ -f "${HOME}/.bashrc" ] ; then
 fi
 
 # Set PATH so it includes user's private bin if it exists
-if [ -d "${HOME}/dotfiles/srihas/dotfiles/bin" ] ; then
-    PATH="${HOME}/dotfiles/srihas/dotfiles/bin:${PATH}"
+if [ -d "${HOME}/dotfiles/srihas/bin" ] ; then
+    PATH="${HOME}/dotfiles/srihas/bin:${PATH}"
 fi
 PATH=".:${PATH}"
 
