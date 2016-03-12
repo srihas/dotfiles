@@ -13,13 +13,13 @@ done
 
 # All the settings reside inside config/ folder, so source all those files.
 if [ -d "DOTFILE_DIR/config" ] ; then
-    # echo “Source files from DOTFILE_DIR”
+    # echo "Source files from DOTFILE_DIR"
     for file in DOTFILE_DIR/config/*
     do
         source $file
     done
 else
-    echo “Config folder not found at DOTFILE_DIR/config”
+    echo "Config folder not found at DOTFILE_DIR/config"
 fi
 
 # Check if brew is installed and proceed accordingly

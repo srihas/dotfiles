@@ -52,7 +52,7 @@ function prompt {
 
     local USERCOLOR=${REDBOLD}
     if is_ssh; then
-        USERCOLOR=${CYANBOLD}
+        USERCOLOR=${CYAN}
     fi
 
     # First line

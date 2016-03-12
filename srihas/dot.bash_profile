@@ -6,10 +6,10 @@ if [ -f "${HOME}/.bashrc" ] ; then
 fi
 
 # Set PATH so it includes user's dotfiles bin if it exists
-if [ -d "/Users/srihpall/dotfiles/srihas/bin" ] ; then
-    PATH="/Users/srihpall/dotfiles/srihas/bin:${PATH}"
+if [ -d "DOTFILE_DIR/bin" ] ; then
+    PATH="DOTFILE_DIR/bin:${PATH}"
 else
-    echo “Updating PATH to dotfile bin directory failed”
+    echo "Updating PATH to dotfile bin directory failed"
 fi
 
 PATH=".:${PATH}"
