@@ -7,3 +7,6 @@
 [submodule "rozuur"]
 	path = rozuur
 	url = https://github.com/srihas/rozuur-dotfiles.git
+[submodule "srihas"]
+	path = srihas
+	url = https://github.com/srihas/mydotfiles.git
