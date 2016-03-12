@@ -3,8 +3,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-command -v git >/dev/null 2>&1
-if [ $? -eq 0 ];then
+if [ -x "$(command -v git)" ] ; then
 	echo "Updating dotfiles from git repo"
     git pull origin master
 else

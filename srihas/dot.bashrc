@@ -23,5 +23,4 @@ else
 fi
 
 # Check if brew is installed and proceed accordingly
-command -v brew >/dev/null 2>&1
-[ $? -eq 0 ] && [ -f "`brew --prefix`/etc/grc.bashrc" ] && source "`brew --prefix`/etc/grc.bashrc"
+[ -x "$(command -v brew)" ] && [ -f "`brew --prefix`/etc/grc.bashrc" ] && source "`brew --prefix`/etc/grc.bashrc"

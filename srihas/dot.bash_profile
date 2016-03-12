@@ -6,8 +6,8 @@ if [ -f "${HOME}/.bashrc" ] ; then
 fi
 
 # Set PATH so it includes user's dotfiles bin if it exists
-if [ -d "DOTFILE_DIR/bin" ] ; then
-    PATH="DOTFILE_DIR/bin:${PATH}"
+if [ -d "/Users/srihpall/dotfiles/srihas/bin" ] ; then
+    PATH="/Users/srihpall/dotfiles/srihas/bin:${PATH}"
 else
     echo “Updating PATH to dotfile bin directory failed”
 fi
@@ -30,7 +30,6 @@ fi
 # fi
 
 #Check if rbenv is installed and init rbenv
-command -v rbenv >/dev/null 2>&1
-if [ $? -eq 0 ]; then
+if [ -x "$(command -v rbenv)" ] ; then
     eval "$(rbenv init -)"
 fi
