@@ -11,10 +11,17 @@ for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null
 done
 
-# All the settings reside inside ~/config/ folder, so source all those files.
-for file in ${HOME}/dotfiles/srihas/config/*
-do
-    source $file
-done
+# All the settings reside inside config/ folder, so source all those files.
+if [ -d "DOTFILE_DIR/config" ] ; then
+    # echo “Source files from DOTFILE_DIR”
+    for file in DOTFILE_DIR/config/*
+    do
+        source $file
+    done
+else
+    echo “Config folder not found at DOTFILE_DIR/config”
+fi
 
-[ -f "`brew --prefix`/etc/grc.bashrc" ] && source "`brew --prefix`/etc/grc.bashrc"
+# Check if brew is installed and proceed accordingly
+command -v brew >/dev/null 2>&1
+[ $? -eq 0 ] && [ -f "`brew --prefix`/etc/grc.bashrc" ] && source "`brew --prefix`/etc/grc.bashrc"

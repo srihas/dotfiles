@@ -5,10 +5,13 @@ if [ -f "${HOME}/.bashrc" ] ; then
     source "${HOME}/.bashrc"
 fi
 
-# Set PATH so it includes user's private bin if it exists
-if [ -d "${HOME}/dotfiles/srihas/bin" ] ; then
-    PATH="${HOME}/dotfiles/srihas/bin:${PATH}"
+# Set PATH so it includes user's dotfiles bin if it exists
+if [ -d "DOTFILE_DIR/bin" ] ; then
+    PATH="DOTFILE_DIR/bin:${PATH}"
+else
+    echo “Updating PATH to dotfile bin directory failed”
 fi
+
 PATH=".:${PATH}"
 
 # Place user local stuff here
@@ -26,5 +29,8 @@ fi
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
-# Init rbenv
-eval "$(rbenv init -)"
+#Check if rbenv is installed and init rbenv
+command -v rbenv >/dev/null 2>&1
+if [ $? -eq 0 ]; then
+    eval "$(rbenv init -)"
+fi

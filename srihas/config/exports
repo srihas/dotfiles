@@ -6,7 +6,8 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export EDITOR="vim"
 
 # Add brew path for coreutils
-[ -d "`brew --prefix`/opt/coreutils/libexec/gnubin" ] && export PATH="`brew --prefix`/opt/coreutils/libexec/gnubin:$PATH"
+command -v brew >/dev/null 2>&1
+[ $? -eq 0 ] && [ -d "`brew --prefix`/opt/coreutils/libexec/gnubin" ] && export PATH="`brew --prefix`/opt/coreutils/libexec/gnubin:$PATH"
 
 if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]
 then
@@ -14,7 +15,8 @@ then
     source /usr/local/bin/virtualenvwrapper.sh
 fi
 
-if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+command -v brew >/dev/null 2>&1
+if [ $? -eq 0 ] && [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
     source $(brew --prefix)/share/bash-completion/bash_completion
 fi
 

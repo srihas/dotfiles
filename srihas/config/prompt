@@ -52,13 +52,13 @@ function prompt {
 
     local USERCOLOR=${REDBOLD}
     if is_ssh; then
-        USERCOLOR=${PURPLEBOLD}
+        USERCOLOR=${CYANBOLD}
     fi
 
     # First line
     PS1="${TITLEBAR}${USERCOLOR}${USER}: ${GREEN}${DIR} ${CYAN}\$(parse_git_branch) \n"
     if [ ${EXIT_STATUS} -eq 0 ]; then
-        PS1="${PS1}${BLACK}→${NCOLOR} "
+        PS1="${PS1}${WHITE}→${NCOLOR} "
     else
         PS1="${PS1}${RED}[${EXIT_STATUS##0}] ${BLACK}→${NCOLOR} "
     fi
