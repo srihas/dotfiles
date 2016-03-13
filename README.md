@@ -18,6 +18,12 @@ To install utilities and applications using brew
 
 $ ./brew.sh
 
+To restore sublime settings
+
+$ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+
+$ ln -s ~/dotfiles/danro/sublime/ sublime
+
 
 
 # Install homesick (install rbenv if conflicts while installing gem)
